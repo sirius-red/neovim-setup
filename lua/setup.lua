@@ -5,10 +5,21 @@ local M = {}
 
 M.options = {}
 
+---@private
+function M.parse_options(options)
+	if options.language_packs then
+		options.language_packs = utils.dedup_list(options.language_packs)
+	end
+
+	M.options = options
+end
+
+---@private
 function M.vim_options()
 	require('core.options')
 end
 
+---@private
 function M.lazy_nvim()
 	local lazy = require('core.lazynvim')
 
@@ -16,17 +27,14 @@ function M.lazy_nvim()
 	lazy.setup()
 end
 
+---@private
 function M.keymaps()
 	require('core.keymaps')
 end
 
 function M.init(options)
 	if options then
-		M.options = options
-
-		if M.options.language_packs then
-			M.options.language_packs = utils.dedup_list(M.options.language_packs)
-		end
+		M.parse_options(options)
 	end
 
 	M.vim_options()

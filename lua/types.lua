@@ -18,6 +18,7 @@
 
 ---@class NeovimSetup
 ---@field options NeovimSetupOptions
+---@field parse_options fun(options: NeovimSetupOptions): nil
 ---@field vim_options fun(): nil
 ---@field lazy_nvim fun(): nil
 ---@field keymaps fun(): nil
