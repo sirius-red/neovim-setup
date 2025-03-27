@@ -1,1 +1,16 @@
-require('setup').init({ copilot = 'codeium' })
+require('setup').init({
+	copilot = 'codeium',
+	language_packs = {
+		'bash',
+		'cmake',
+		'cpp',
+		'docker',
+		'fish',
+		'json',
+		'lua',
+		'markdown',
+		'mdx',
+		'python-ruff',
+		'typescript-all-in-one',
+	},
+})
