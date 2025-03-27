@@ -17,7 +17,8 @@ My own Neovim setup using Lazy and AstroNvim
   - [Python](https://www.python.org/) - python repl toggle terminal (`<leader>tp`)
   - [Node](https://nodejs.org/en/) - node repl toggle terminal (`<leader>tn`)
 
-> [!NOTE] > <sup id="1">[1]</sup> Note when using default theme: For MacOS, the default terminal does not have true color support. You will need to use [iTerm2](https://iterm2.com/), [Kitty](https://sw.kovidgoyal.net/kitty/), [WezTerm](https://wezfurlong.org/wezterm/), or another [terminal emulator](https://github.com/termstandard/colors?tab=readme-ov-file#truecolor-support-in-output-devices) that has true color support.
+> [!NOTE]
+> ­<sup id="1">[1]</sup> Note when using default theme: For MacOS, the default terminal does not have true color support. You will need to use [iTerm2](https://iterm2.com/), [Kitty](https://sw.kovidgoyal.net/kitty/), [WezTerm](https://wezfurlong.org/wezterm/), or another [terminal emulator](https://github.com/termstandard/colors?tab=readme-ov-file#truecolor-support-in-output-devices) that has true color support.
 
 ## Installation
 
