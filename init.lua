@@ -1,4 +1,5 @@
 require('setup').init({
+	shell = '/usr/bin/fish',
 	copilot = 'codeium',
 	language_packs = {
 		'bash',

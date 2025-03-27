@@ -40,6 +40,10 @@ function M.init(options)
 	M.vim_options()
 	M.lazy_nvim()
 	M.keymaps()
+
+	if M.options.shell and vim.fn.executable(M.options.shell) then
+		require('toggleterm').setup({ shell = M.options.shell })
+	end
 end
 
 return M
