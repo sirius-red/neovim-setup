@@ -1,10 +1,7 @@
 local set = vim.keymap.set
-local silent = { silent = true, expr = true }
 
 --#region AI
 set('i', '<C-;>', function()
-	return vim.fn['codeium#CycleOrComplete']()
-end, silent)
-
--- set('', '', function() end, silent)
+	require('codeium.virtual_text').cycle_or_complete()
+end, { silent = true, expr = true })
 --#endregion
