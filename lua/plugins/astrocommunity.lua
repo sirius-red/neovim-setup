@@ -1,9 +1,24 @@
--- if true then return {} end -- WARN: COMMENT THIS LINE TO ACTIVATE THIS FILE
+local language_packs = require('setup').options.language_packs
 
 ---@type LazySpec
-return {
-	{ 'AstroNvim/astrocommunity', priority = 10000 },
-	{ import = 'astrocommunity.pack.lua' },
-	{ import = 'astrocommunity.pack.markdown' },
+local spec = {
+	{ 'AstroNvim/astrocommunity',                                            priority = 10000 },
 	{ import = 'astrocommunity.colorscheme.catppuccin' },
+	{ import = 'astrocommunity.terminal-integration.toggleterm-manager-nvim' },
+	{ import = 'astrocommunity.scrolling.nvim-scrollbar' },
+	{ import = 'astrocommunity.scrolling.mini-animate' },
+	{ import = 'astrocommunity.register.nvim-neoclip-lua' },
+	{ import = 'astrocommunity.lsp.nvim-lsp-file-operations' },
 }
+
+if language_packs and type(spec) ~= 'string' then
+	for _, v in ipairs(language_packs) do
+		table.insert(spec, { import = 'astrocommunity.pack.' .. v })
+
+		if v == 'markdown' then
+			table.insert(spec, { import = 'astrocommunity.markdown-and-latex.render-markdown-nvim' })
+		end
+	end
+end
+
+return spec

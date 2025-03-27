@@ -1,3 +1,5 @@
+local utils = require('core.utils')
+
 ---@class NeovimSetup
 local M = {}
 
@@ -21,6 +23,10 @@ end
 function M.init(options)
 	if options then
 		M.options = options
+
+		if M.options.language_packs then
+			M.options.language_packs = utils.dedup_list(M.options.language_packs)
+		end
 	end
 
 	M.vim_options()
