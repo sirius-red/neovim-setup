@@ -2,8 +2,7 @@ local language_packs = require('setup').options.language_packs
 
 ---@type LazySpec
 local spec = {
-	{ 'AstroNvim/astrocommunity',                                            priority = 10000 },
-	{ import = 'astrocommunity.colorscheme.catppuccin' },
+	{ 'AstroNvim/astrocommunity' },
 	{ import = 'astrocommunity.terminal-integration.toggleterm-manager-nvim' },
 	{ import = 'astrocommunity.scrolling.nvim-scrollbar' },
 	{ import = 'astrocommunity.scrolling.mini-animate' },
