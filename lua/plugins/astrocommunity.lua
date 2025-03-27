@@ -2,7 +2,8 @@
 
 ---@type LazySpec
 return {
-	{ 'AstroNvim/astrocommunity',                      priority = 10000 },
+	{ 'AstroNvim/astrocommunity', priority = 10000 },
 	{ import = 'astrocommunity.pack.lua' },
+	{ import = 'astrocommunity.pack.markdown' },
 	{ import = 'astrocommunity.colorscheme.catppuccin' },
 }
